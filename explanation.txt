@@ -1,0 +1,8 @@
+## Note that this is the explanation only....this script will not work unless you remove the comments... To get the executable script in txt, open full_script_only.txt
+
+strmsg = "Replace this with the text that you want the computer to say"  ## create a string variable
+Set speaker = CreateObject("SAPI.spVoice")                               ## create a SAPI object
+Set speaker.voice = speaker.GetVoices.Item(2)                            ## get all the possible options for the voice 0-> male , 1,2--> female voice 
+speaker.Rate = 1							 ## set the speed
+speaker.volume = 70							 ## set the volume
+speaker.Speak strmsg						         ## say whatever is in the string variable
